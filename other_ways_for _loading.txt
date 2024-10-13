@@ -1,0 +1,42 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Make sure this is called at the beginning
+
+connect_str = os.getenv('CONNECT_STRs')
+container_name = os.getenv('CONTAINER_NAME')
+
+if not connect_str:
+    raise ValueError("Azure Blob connection string is missing!")
+
+
+load_dotenv()
+
+connect_str = os.getenv('CONNECT_STR')
+blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+
+container_name = os.getenv('CONTAINER_NAME')
+container_client = blob_service_client.get_container_client(container_name)
+
+
+
+# Create a BlobServiceClient object
+#blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+#container_client = blob_service_client.get_container_client(container_name)
+#blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+#container_client = blob_service_client.get_container_client(container_name)
+# Load data to Azure Blob Storage
+files = [
+    (data, 'rawdata/cleaned_zipco_transaction_data.csv'),
+    (products, 'cleaneddata/product.csv'),
+    (customers, 'cleaneddata/customers.csv'),
+    (staff, 'cleaneddata/staff.csv'),
+    (transaction, 'cleaneddata/transaction.csv')
+]
+
+for file, blob_name in files:
+    blob_client = container_client.get_blob_client(blob_name)
+    output = file.to_csv(index=False)
+    blob_client.upload_blob(output, overwrite=True)
+    print(f'{blob_name} loaded into Azure Blob Storage')
+

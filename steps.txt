@@ -1,0 +1,32 @@
+create folder
+add data set
+create ipynb
+choose kerel
+open terminal
+intialisise git ----- git intialisise
+create repo online
+git status
+git add .
+git status
+git commit -m "firt commit"
+git config --global user.email "h@gmail.com"
+git config --global user.name "AhmadD"
+clear
+git status
+copy code from repopase and run
+git branch to see the master branch
+git push -u origin master
+open new terminal
+run pip install pandas
+or from the  python note book run !pip install pandas azure_storage_blob dotenv
+!python -m pip install python-dotenv
+#Importing Necessary libraries
+# Data Extraction
+# Data cleaning and transformation
+# Handle missing values( filling missing numeric values with the mean or median)
+# Handling missing values (filling missing string object values with 'unknown')
+data['Date'] = pd.to_datetime(data['Date'])
+#Create tables
+# Save data to as csv files
+# Clear cached variables (.env)
+Loading the data to azure
