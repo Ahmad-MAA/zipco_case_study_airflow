@@ -36,3 +36,5 @@ use wsl to run airflow
 ensure python3 is installed
 create a virtual environment
 update git ignore to ignore vertual environment folder
+update git to orging
+
