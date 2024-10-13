@@ -30,3 +30,9 @@ data['Date'] = pd.to_datetime(data['Date'])
 # Save data to as csv files
 # Clear cached variables (.env)
 Loading the data to azure
+create each py for the pipeline
+create the DAG script
+use wsl to run airflow
+ensure python3 is installed
+create a virtual environment
+update git ignore to ignore vertual environment folder
