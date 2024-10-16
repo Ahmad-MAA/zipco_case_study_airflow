@@ -40,3 +40,44 @@ update git to orging
 zipcoenv\bin\activate
 create a requirement.txt folder
 run command pip install -r requirements.txt
+install pacakeges individually
+airflow init db
+create user accout
+create a file create_user.txt
+run the create command and input password
+go to airflow directory from linux using cd/home/airflow
+run / spind the server aiflow with webserver 8080
+run the airflow schedulere all on wsl 
+http://localhost:8080 on web pacakeges
+log in on webpage
+open wsl >>> .env >> cd /home/ahmad/airflow
+make a new directory for the dag folder( mkdir zipco_food_dag)
+run ls 
+run sudo nano airflow.cfg 
+chage dag file name to the new directory dag directory....
+Ctrl + X, Y to save and enter to close
+cd zipco_food_dag
+open a new terminal  copy---  2
+wsl console
+copy file to airflow directory
+cp zipco_transaction.csv /home/ahmad/airflow/zipco_food_dag
+source new_env/bin/activate
+cd /home/ahmad/airflow
+cp .env /home/ahmad/airflow/zipco_food_dag
+sudo nano .env ------- to check
+copy all pipeline files
+Ctrl C to end terminal
+
+run / spind the server aiflow with webserver 8080
+run the airflow schedulere all on wsl  virtual environment
+end airflow pipeline
+
+remove the file 
+rm Extraction.py and other parts
+run sudo nano dag_script.py
+copy from the py. file and paste the Ctrl + X Y enter(wsl venv)
+and for other files
+run ls
+run find -name folder_name
+run locate file_name
+run locate sudo apt-get install mlocate
